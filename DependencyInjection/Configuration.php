@@ -57,6 +57,8 @@ class Configuration implements ConfigurationInterface {
         $builder->root($this->alias)
                     ->children()
                         ->scalarNode('base_url')->defaultValue(null)->end()
+                        ->arrayNode('defaults')
+                        ->end()
 
                         ->arrayNode('headers')
                             ->prototype('scalar')
